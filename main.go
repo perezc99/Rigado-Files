@@ -107,7 +107,7 @@ func main() {
 	sleep_time := number_of_loops * 10
 
 	// Start sleep function
-	time.Sleep(sleep_time * time.Second)
+	time.Sleep(time.Duration(sleep_time) * time.Second)
 
 	// Terminate ticker once sleep function timesout
 	ticker.Stop()
@@ -117,6 +117,6 @@ func main() {
 	channel_var <- true
 
 	// Print confirmation application has stopped running
-	fmt.Printf("The application has completed!")
+	fmt.Printf("The application has completed!\n")
 
 }
